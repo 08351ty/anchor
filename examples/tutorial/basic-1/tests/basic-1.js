@@ -32,6 +32,8 @@ describe("basic-1", () => {
     // Fetch the newly created account from the cluster.
     const account = await program.account.myAccount.fetch(myAccount.publicKey);
 
+    console.log(account);
+
     // Check it's state was initialized.
     assert.ok(account.data.eq(new anchor.BN(1234)));
 
